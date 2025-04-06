@@ -53,9 +53,38 @@
   </style>
 </head>
 <body>
-  <!-- Full body content omitted here to save space, already known -->
-  <script>
-    // All JavaScript as in the document above
-  </script>
-</body>
+    <div id="start-screen">
+      <h1>El Laberinto</h1>
+      <div id="scoreboard"></div>
+      <form id="start-form">
+        <input type="text" id="player1-name" placeholder="Nombre Jugador 1 (rojo)" required><br><br>
+        <input type="text" id="player2-name" placeholder="Nombre Jugador 2 (azul)" required><br><br>
+        <button type="submit">Jugar</button>
+      </form>
+      <button id="new-players">Cambiar jugadores</button>
+    </div>
+  
+    <div id="game-screen">
+      <h2 id="timer">Tiempo: 60</h2>
+      <div id="grid"></div>
+      <div id="mobile-controls">
+        <button onclick="movePlayer(player1, 0, -1)">⬆️</button>
+        <button onclick="movePlayer(player1, -1, 0)">⬅️</button>
+        <button onclick="movePlayer(player1, 1, 0)">➡️</button>
+        <button onclick="movePlayer(player1, 0, 1)">⬇️</button>
+      </div>
+    </div>
+  
+    <div id="end-screen">
+      <h1 id="result"></h1>
+      <button onclick="resetGame()">Jugar otra vez</button>
+    </div>
+  
+    <audio id="win-sound" src="win.mp3" preload="auto"></audio>
+  
+    <script>
+      // Aquí va el código JavaScript que controla el juego,
+      // como en la versión completa que ya tienes implementada.
+    </script>
+  </body>
 </html>
